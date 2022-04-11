@@ -3,12 +3,8 @@ import numpy as np
 
 #TamanhoMatriz=3
 
-# INFINITA 
-TamanhoMatriz=2
-matriz = np.array([[-6, 4, 2],[3, -2, -1]], dtype=float)
-
 #POSSIVEL 
-#TamanhoMatriz=3
+TamanhoMatriz=3
 #matriz = np.array([[0, -2, 5, 3],[6, 0, 12, 2],[-5, 1, 0, 1]], dtype=float)
 #matriz = np.array([[0, -2, 5, 20],[6, -9, 12, 51],[-5, 0, 2, 1]], dtype=float)
 #matriz = np.array([[0, -2, 5, 20],[6, -9, 12, 51],[-5, 0, 2, 1]], dtype=float)
@@ -17,7 +13,7 @@ matriz = np.array([[-6, 4, 2],[3, -2, -1]], dtype=float)
 
 # IMPOSSIVEL
 #TamanhoMatriz=3
-#matriz = np.array([[0, -2, 5, 3],[0, 1, 12, 2],[0, 1, 2, 1]], dtype=float)
+matriz = np.array([[0, -2, 5, 3],[0, 1, 12, 2],[0, 1, 2, 1]], dtype=float)
 #matriz = np.array([[0, 0, 5, 20],[0, 0, 12, 51],[0, 0, 2, 1]], dtype=float)
 #TamanhoMatriz=3
 #matriz = np.array([[1, 2, 1, 0],[2, 1, -3, 0],[3, 3, -2, 0]], dtype=float)
@@ -72,11 +68,9 @@ def comutar(n, matriz, linha):
                    matriz[linha][k] = matriz[i][k]
                    matriz[i][k] = aux
                 possui=1
-            if(possui==1):
                 break
-        if(possui == 0):
-            print('SISTEMA IMPOSSIVEL')
-            exit()
+            #if(possui==1):
+                #break
     else:
         for i in range(0, n):
             for j in range(0, n):
